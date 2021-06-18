@@ -5,6 +5,7 @@ import PageFeature from "./PageFeature";
 import PageWorks from "./PageWorks";
 import PageFaq from "./PageFaq";
 import PagePricing from "./PagePricing";
+import PageContact from "./PageContact";
 
 function PageHome() {
   return (
@@ -15,6 +16,7 @@ function PageHome() {
       <PageWorks />
       <PagePricing />
       <PageFaq />
+      <PageContact />
     </div>
   );
 }
