@@ -5,7 +5,7 @@ const { Panel } = Collapse;
 
 function PageFaq() {
   return (
-    <div className="block faqBlock">
+    <div id="faq" className="block faqBlock">
       <div className="container-fluid">
         {" "}
         <div className="titleHolder">

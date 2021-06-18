@@ -1,9 +1,10 @@
 import { Form, Input, Button, Checkbox } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
+const { TextArea } = Input;
 
 function PageContact() {
   return (
-    <div className="block contactBlock">
+    <div id="contact" className="block contactBlock">
       <div className="container-fluid">
         <div className="titleHolder">
           <h2>Get in Touch</h2>
@@ -15,32 +16,28 @@ function PageContact() {
           initialValues={{ remember: true }}
         >
           <Form.Item
-            name="username"
-            rules={[{ required: true, message: "Please input your Username!" }]}
+            name="fullname"
+            rules={[
+              { required: true, message: "Please input your Full Name!" },
+            ]}
           >
-            <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
-            />
+            <Input placeholder="Full Name" />
           </Form.Item>
           <Form.Item
-            name="password"
-            rules={[{ required: true, message: "Please input your Password!" }]}
+            name="Email Address"
+            rules={[
+              { required: true, message: "Please input your Email Address!" },
+            ]}
           >
-            <Input
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              type="password"
-              placeholder="Password"
-            />
+            <Input type="email" placeholder="Email Address" />
           </Form.Item>
-          <Form.Item>
-            <Form.Item name="remember" valuePropName="checked" noStyle>
-              <Checkbox>Remember me</Checkbox>
-            </Form.Item>
 
-            <a className="login-form-forgot" href="">
-              Forgot password
-            </a>
+          <Form.Item name="Subject">
+            <Input placeholder="Subject" />
+          </Form.Item>
+
+          <Form.Item name="Message">
+            <TextArea placeholder="Message" />
           </Form.Item>
 
           <Form.Item>
@@ -49,9 +46,8 @@ function PageContact() {
               htmlType="submit"
               className="login-form-button"
             >
-              Log in
+              Submit
             </Button>
-            Or <a href="">register now!</a>
           </Form.Item>
         </Form>
       </div>

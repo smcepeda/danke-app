@@ -1,11 +1,13 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import "antd/dist/antd.css";
-import { Layout, Menu, Breadcrumb } from "antd";
-import PageHome from "./pages/PageHome";
-import PageHeader from "./pages/PageHeader";
 
-const { Header, Content } = Layout;
+import PageHeader from "./pages/PageHeader";
+import PageFooter from "./pages/PageFooter";
+import PageHome from "./pages/PageHome";
+
+import { Layout } from "antd";
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
@@ -13,10 +15,12 @@ function App() {
       <Header>
         <PageHeader />
       </Header>
-
       <Content>
         <PageHome />
       </Content>
+      <Footer>
+        <PageFooter />
+      </Footer>
     </Layout>
   );
 }
